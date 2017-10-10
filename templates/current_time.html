@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    Date&Time
+{% endblock %}
+
+{% block title %}
+    Django Core
+{% endblock %}
+
+{% block navbar_title %}
+    Current Date & Time
+{% endblock %}
+
+{% block content_title %}
+    Automatic Date and Time
+{% endblock %}
+
+{% block content %}
+    <div class="panel panel-primary">
+        <div class="panel-heading">Automatic date widget</div>
+        <div class="panel-body">{{ message }}</div>
+        <div class="panel-footer">Timezone = Europe/Paris</div>
+    </div>
+{% endblock %}
