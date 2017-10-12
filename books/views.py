@@ -89,3 +89,46 @@ def search_by_valid_title(request):
     print(context_dic)
 
     return render(request, 'books/search_by_title_with_validation.html', context=context_dic)
+
+
+def custom_filters(request):
+    return render(request, template_name='books/custom_filters.html', context={
+        'test_chars': 'UAOIUZKVNZLDJVO',
+    })
+
+
+def custom_tags(request):
+    return render(request, template_name='books/custom_tags.html', context=None)
+
+
+def advanced_custom_tags(request):
+    return render(request, template_name='books/advanced_custom_tags.html', context=None)
+
+
+def c2_related_objects(request):
+    first_book = Book.objects.first()
+    return render(request, template_name='books/c2_related_objects.html', context={
+        'first_book': first_book,
+    })
+
+
+def c2_model_manager(request):
+    title_count = None
+    search_form_error = None
+    query_placeholder = "Search"
+    albert_books = Book.albert_objects.all()
+    if request.method == 'POST':
+        keyword = request.POST['keyword']
+        if not keyword:
+            search_form_error = "Empty search query."
+        elif len(keyword) > 20:
+            search_form_error = "Too long query."
+        else:
+            query_placeholder = keyword
+            title_count = Book.objects.title_count(keyword)
+    return render(request, 'books/c2_model_manager.html', {
+        'title_count': title_count,
+        'search_form_error': search_form_error,
+        'query_placeholder': query_placeholder,
+        'albert_books': albert_books,
+    })

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    Tags
+{% endblock %}
+
+{% block title %}
+    Django Core
+{% endblock %}
+
+{% block navbar_title %}
+    Custom Tags
+{% endblock %}
+
+{% block content_title %}
+    Custom Template tags
+{% endblock %}
+
+{% block content %}
+    <h5>Below are basic custom template tags examples</h5>
+    <p class="text-info">simple tag</p>
+    {% load custom_tags_1 %}
+    <p><code>{{ "{% current_time '%A %d %B %-Hh%M' %}" }}</code></p>
+    <p>{% current_time "%A %d %B %-Hh%M" %}</p>
+    <p class="text-info">inclusion tag</p>
+    <p><code>{{ "{% show_books %}" }}</code></p>
+    {% show_books %}
+    <p class="text-info">assignment tag</p>
+    <p><code>{{ "{% show_users as users %}" }}</code></p>
+    {% show_users as users %}
+    {{ users }}
+{% endblock %}

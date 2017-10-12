@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    Filters
+{% endblock %}
+
+{% block title %}
+    Django Core
+{% endblock %}
+
+{% block navbar_title %}
+    Custom Filters
+{% endblock %}
+
+{% block content_title %}
+    Custom Template filters
+{% endblock %}
+
+{% block content %}
+    <h5>Below are basic custom template filters examples</h5>
+    {% load custom_filters_1 %}
+    <p>{{ test_chars|lower }}</p>
+    <p>{{ test_chars|better }}</p>
+    <p>{{ test_chars|add_xxx }}</p>
+{% endblock %}

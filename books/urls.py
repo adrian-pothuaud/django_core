@@ -22,4 +22,9 @@ app_name = 'books'
 urlpatterns = [
     url(r'^search_by_title/$', books_views.search_by_title, name='search_by_title'),
     url(r'^search_by_valid_title/$', books_views.search_by_valid_title, name='search_by_valid_title'),
+    url(r'^custom_filters/$', books_views.custom_filters, name='custom_filters'),
+    url(r'^custom_tags/$', books_views.custom_tags, name='custom_tags'),
+    url(r'^advanced_custom_tags/$', books_views.advanced_custom_tags, name='advanced_custom_tags'),
+    url(r'^c2_related_objects/$', books_views.c2_related_objects, name='c2_related_objects'),
+    url(r'^c2_model_manager/$', books_views.c2_model_manager, name='c2_model_manager'),
 ]

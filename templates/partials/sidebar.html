@@ -45,6 +45,21 @@
                 </li>
                 <li><small class="text-warning text-muted"> Advanced</small></li>
                 <li><a href="{% url 'debug' %}"><i class="fa fa-delicious"></i> Debug view</a></li>
+                <li>
+                    <a><i class="fa fa-tag"></i> Templating<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="{% url 'books:custom_filters' %}"><i class="fa fa-filter"></i> Custom filters</a></li>
+                        <li><a href="{% url 'books:custom_tags' %}"><i class="fa fa-tag"></i> Custom tags</a></li>
+                        <li><a href="#"><i class="fa fa-tag"></i> Advanced custom tags</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a><i class="fa fa-database"></i> Models<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="{% url 'books:c2_related_objects' %}"><i class="fa fa-link"></i> Related objects</a></li>
+                        <li><a href="{% url 'books:c2_model_manager' %}"><i class="fa fa-magic"></i> Model manager</a></li>
+                    </ul>
+                </li>
                 {% comment %}
                 <li>
                     <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>

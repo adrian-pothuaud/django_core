@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    Models
+{% endblock %}
+
+{% block title %}
+    Django Core
+{% endblock %}
+
+{% block navbar_title %}
+    Django Models
+{% endblock %}
+
+{% block content_title %}
+    Related Objects
+{% endblock %}
+
+{% block content %}
+
+    <p>Book : {{ first_book }}</p>
+
+    <h4>Accessing foreign key field</h4>
+
+    <p>Publisher : {{ first_book.publisher }}</p>
+
+    <h6>Reversed</h6>
+
+    <p>Book : {{ first_book.publisher.book_set.first }}</p>
+
+    <h4>Accessing many to many values</h4>
+
+    <p>Authors : {{ first_book.authors.all }}</p>
+
+    <h6>Reversed</h6>
+
+    <p>Book : {{ first_book.authors.all.first.book_set.first }}</p>
+
+{% endblock %}

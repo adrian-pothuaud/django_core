@@ -3,7 +3,6 @@ import datetime
 from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.template import RequestContext, loader
 
 from django_core_project.forms import ContactForm
 
@@ -18,18 +17,21 @@ def custom_user_processor(request):
 def index(request):
     # an example using template loading and rendering
     # with template processor
-    t = loader.get_template('hello_world.html')
-    c = RequestContext(request, None, processors=[custom_user_processor])
-    return t.render(c)
+    return render(request, 'index.html', context={
+        'processors': {
+            'user': custom_user_processor,
+        }
+    })
 
 
 def hello_world(request):
     # an example of template rendering using template processor
     # and the render function that avoid the template loading step to be hard-coded
-    return render(request, 'hello_world.html', context=RequestContext(request=request,
-                                                                      dict_=None,
-                                                                      processors=[custom_user_processor, ]
-                                                                      ))
+    return render(request, 'hello_world.html', context={
+        'processors': {
+            'user': custom_user_processor,
+        }
+    })
 
 
 def current_datetime(request):

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    Tags
+{% endblock %}
+
+{% block title %}
+    Django Core
+{% endblock %}
+
+{% block navbar_title %}
+    Custom Tags
+{% endblock %}
+
+{% block content_title %}
+    Advanced Custom Template tags
+{% endblock %}
+
+{% block content %}
+    <h5>Below is usage of advanced custom template tag example</h5>
+
+    <p>{% adv_current_time "%A %d %B %-Hh%M" %}</p>
+
+{% endblock %}
