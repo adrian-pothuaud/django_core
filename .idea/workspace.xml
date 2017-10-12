@@ -2,31 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aef1f874-254c-41d8-b186-e5a53e4efd6c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/books/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/django_core_project/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/books/search_by_title.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/books/search_by_title_with_validation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/contact_form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/request_meta.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/simple_form_handling.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_core_project/settings.py" afterPath="$PROJECT_DIR$/django_core_project/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_core_project/urls.py" afterPath="$PROJECT_DIR$/django_core_project/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_core_project/forms.py" afterPath="$PROJECT_DIR$/django_core_project/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_core_project/views.py" afterPath="$PROJECT_DIR$/django_core_project/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/partials/navbar_right.html" afterPath="$PROJECT_DIR$/templates/partials/navbar_right.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/partials/sidebar.html" afterPath="$PROJECT_DIR$/templates/partials/sidebar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/contact_form.html" afterPath="$PROJECT_DIR$/templates/contact_form.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,21 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django_core_project/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="52" lean-forward="true" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_core_project/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
-              <caret line="96" column="57" lean-forward="false" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
+            <state relative-caret-position="152">
+              <caret line="73" column="9" lean-forward="true" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -71,8 +50,8 @@
       <file leaf-file-name="contact_form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/contact_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="60" column="30" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+            <state relative-caret-position="197">
+              <caret line="105" column="28" lean-forward="false" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -122,10 +101,10 @@
         <option value="$PROJECT_DIR$/books/views.py" />
         <option value="$PROJECT_DIR$/django_core_project/urls.py" />
         <option value="$PROJECT_DIR$/templates/partials/sidebar.html" />
-        <option value="$PROJECT_DIR$/django_core_project/forms.py" />
         <option value="$PROJECT_DIR$/django_core_project/settings.py" />
-        <option value="$PROJECT_DIR$/django_core_project/views.py" />
         <option value="$PROJECT_DIR$/templates/contact_form.html" />
+        <option value="$PROJECT_DIR$/django_core_project/views.py" />
+        <option value="$PROJECT_DIR$/django_core_project/forms.py" />
       </list>
     </option>
   </component>
@@ -247,10 +226,10 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23017903" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30179027" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30179027" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3005115" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24981412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JSON Utils" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -447,7 +426,7 @@
         <state relative-caret-position="70">
           <caret line="63" column="34" lean-forward="false" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -518,29 +497,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_core_project/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="52" lean-forward="true" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/contact_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="60" column="30" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+        <state relative-caret-position="197">
+          <caret line="105" column="28" lean-forward="false" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/django_core_project/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="96" column="57" lean-forward="false" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
+        <state relative-caret-position="152">
+          <caret line="73" column="9" lean-forward="true" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_core_project/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

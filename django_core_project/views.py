@@ -65,60 +65,71 @@ def simple_form_handling(request):
 
 
 def contact_form(request):
+    form_get = ContactForm(
+        initial={
+            'subject': 'I love your site !',
+            'email': 'noreply@{}.com'.format(
+                request.get_host().replace(':', '')
+            )
+        }
+    )
+    form_post = ContactForm(
+        initial={
+            'subject': 'I love your site !',
+            'email': 'noreply@{}.com'.format(
+                request.get_host().replace(':', '')
+            )
+        }
+    )
     if request.method == 'GET':
         if 'message' in request.GET.keys():
             # form have been sent
-            form = ContactForm(request.GET)
-            if form.is_bound and form.is_valid():
-                if form.cleaned_data['email']:
+            form_get = ContactForm(request.GET)
+            if form_get.is_bound and form_get.is_valid():
+                if form_get.cleaned_data['email']:
                     send_mail(
-                        form.cleaned_data['subject'],
-                        form.cleaned_data['message'],
-                        form.cleaned_data['email'],
+                        form_get.cleaned_data['subject'],
+                        "{}\n{}".format(form_get.cleaned_data['message'],
+                                        form_get.cleaned_data['full_name']
+                                        ),
+                        form_get.cleaned_data['email'],
                         ['adrianpothuaud@gmail.com'],
                         fail_silently=False,
                     )
                 else:
                     send_mail(
-                        form.cleaned_data['subject'],
-                        "{}\n{}".format(form.cleaned_data['message'],
-                                        form.cleaned_data['full_name']
+                        form_get.cleaned_data['subject'],
+                        "{}\n{}".format(form_get.cleaned_data['message'],
+                                        form_get.cleaned_data['full_name']
                                         ),
                         None,
                         ['adrianpothuaud@gmail.com'],
                         fail_silently=False,
                     )
-        else:
-            # prepare empty form
-            form = ContactForm(
-                initial= {
-                    'subject': 'I love your site !',
-                    'email': 'noreply@{}.com'.format(
-                        request.get_host().replace(':', '')
-                    )
-                }
-            )
     else:
-        form = ContactForm(request.POST)
-        if form.is_bound and form.is_valid():
-            if form.cleaned_data['email']:
+        form_post = ContactForm(request.POST)
+        if form_post.is_bound and form_post.is_valid():
+            if form_post.cleaned_data['email']:
                 send_mail(
-                    form.cleaned_data['subject'],
-                    form.cleaned_data['message'],
-                    form.cleaned_data['email'],
+                    form_post.cleaned_data['subject'],
+                    "{}\n{}".format(form_post.cleaned_data['message'],
+                                    form_post.cleaned_data['full_name']
+                                    ),
+                    form_post.cleaned_data['email'],
                     ['adrianpothuaud@gmail.com'],
                     fail_silently=False,
                 )
             else:
                 send_mail(
-                    form.cleaned_data['subject'],
-                    "{}\n{}".format(form.cleaned_data['message'],
-                                    form.cleaned_data['full_name']
+                    form_post.cleaned_data['subject'],
+                    "{}\n{}".format(form_post.cleaned_data['message'],
+                                    form_post.cleaned_data['full_name']
                                     ),
                     None,
                     ['adrianpothuaud@gmail.com'],
                     fail_silently=False,
                 )
     return render(request, 'contact_form.html', context={
-        'form': form
+        'form_get': form_get,
+        "form_post": form_post
     })

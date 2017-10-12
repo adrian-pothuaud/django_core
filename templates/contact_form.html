@@ -20,31 +20,42 @@
     <p class="text-info">This form is generated with a Django Form Class ! A higher-level library that handles form- and validation-related tasks.</p>
     <p class="text-info">GET method</p>
     <form action="" method="get">
-        {% for hidden_field in form.hidden_fields %}
+        {% for hidden_field in form_get.hidden_fields %}
             {{ hidden_field }}
         {% endfor %}
-        {% for error in form.errors %}
-            <p class="text-danger"><strong>{{ error }}</strong></p>
-        {% endfor %}
+        {% if form_get.errors %}
+            {% for field in form_get %}
+                {% for error in field.errors %}
+                    <div class="alert alert-danger">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+            {% for error in form_get.non_field_errors %}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endif %}
         <div class="row">
             <div class="col-xs-12 col-md-4">
-                {{ form.subject.label_tag }}
-                {{ form.subject }}
+                {{ form_get.subject.label_tag }}
+                {{ form_get.subject }}
             </div>
             <div class="col-xs-12 col-md-4">
-                {{ form.full_name.label_tag }}
-                {{ form.full_name }}
+                {{ form_get.full_name.label_tag }}
+                {{ form_get.full_name }}
             </div>
             <div class="col-xs-12 col-md-4">
-                {{ form.email.label_tag }}
-                {{ form.email }}
+                {{ form_get.email.label_tag }}
+                {{ form_get.email }}
             </div>
         </div>
         <hr/>
         <div class="row">
             <div class="col-xs-12 col-md-6 col-md-offset-3">
-                <p class="text-left">{{ form.message.label_tag }}</p>
-                {{ form.message }}
+                <p class="text-left">{{ form_get.message.label_tag }}</p>
+                {{ form_get.message }}
             </div>
         </div>
         <hr/>
@@ -57,31 +68,42 @@
     <p>Current url : {{ request.get_full_path }}</p>
     <p class="text-info">POST method</p>
     <form action="" method="post">{% csrf_token %}
-        {% for hidden_field in form.hidden_fields %}
+        {% for hidden_field in form_post.hidden_fields %}
             {{ hidden_field }}
         {% endfor %}
-        {% for error in form.errors %}
-            <p class="text-danger"><strong>{{ error }}</strong></p>
-        {% endfor %}
+        {% if form_post.errors %}
+            {% for field in form_post %}
+                {% for error in field.errors %}
+                    <div class="alert alert-danger">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+            {% for error in form_post.non_field_errors %}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endif %}
         <div class="row">
             <div class="col-xs-12 col-md-4">
-                {{ form.subject.label_tag }}
-                {{ form.subject }}
+                {{ form_post.subject.label_tag }}
+                {{ form_post.subject }}
             </div>
             <div class="col-xs-12 col-md-4">
-                {{ form.full_name.label_tag }}
-                {{ form.full_name }}
+                {{ form_post.full_name.label_tag }}
+                {{ form_post.full_name }}
             </div>
             <div class="col-xs-12 col-md-4">
-                {{ form.email.label_tag }}
-                {{ form.email }}
+                {{ form_post.email.label_tag }}
+                {{ form_post.email }}
             </div>
         </div>
         <hr/>
         <div class="row">
             <div class="col-xs-12 col-md-6 col-md-offset-3">
-                <p>{{ form.message.label_tag }}</p>
-                {{ form.message }}
+                <p>{{ form_post.message.label_tag }}</p>
+                {{ form_post.message }}
             </div>
         </div>
         <hr/>
