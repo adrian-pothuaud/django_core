@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 from books import urls as books_urls
+from django_core_project import settings
 from . import views as project_views
 
 urlpatterns = [
@@ -29,5 +30,13 @@ urlpatterns = [
     url(r'^simple_form_handling/$', project_views.simple_form_handling, name='simple_form_handling'),
     url(r'^books/', include(books_urls)),
     url(r'^contact/$', project_views.contact_form, name='contact_form'),
+]
+
+if settings.DEBUG:
+    urlpatterns += [
+        url(r'^debug/$', project_views.debug, name='debug'),
+    ]
+
+urlpatterns += [
     url(r'^', project_views.no_page, name="no_page"),
 ]

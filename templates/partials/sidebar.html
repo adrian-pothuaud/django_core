@@ -16,6 +16,7 @@
                 </li>
                 {% endcomment %}
                 <!-- /.nav-second-level -->
+                <li><small class="text-warning text-muted"> Introductory</small></li>
                 <li>
                     <a href="{% url 'hello_world' %}"><i class="fa fa-hand-peace-o"></i> HelloWorld</a>
                 </li>
@@ -42,6 +43,8 @@
                         <li><a href="{% url 'contact_form' %}"><i class="fa fa-envelope"></i> 4. Contact Form</a></li>
                     </ul>
                 </li>
+                <li><small class="text-warning text-muted"> Advanced</small></li>
+                <li><a href="{% url 'debug' %}"><i class="fa fa-delicious"></i> Debug view</a></li>
                 {% comment %}
                 <li>
                     <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
