@@ -15,20 +15,32 @@
                     <!-- /input-group -->
                 </li>
                 {% endcomment %}
+                <!-- /.nav-second-level -->
                 <li>
-                    <a href="{% url 'hello_world' %}"><i class="fa fa-hand-grab-o"></i> HelloWorld</a>
+                    <a href="{% url 'hello_world' %}"><i class="fa fa-hand-peace-o"></i> HelloWorld</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-times-circle-o"></i> Date&Time<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-clock-o"></i> Date&Time<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="{% url 'datetime_now' %}">Now</a>
+                            <a href="{% url 'datetime_now' %}">Present</a>
                         </li>
                         <li>
-                            <a href="{% url 'datetime_ahead' 4 %}">Ahead</a>
+                            <a href="{% url 'datetime_ahead' 4 %}">Future</a>
                         </li>
                     </ul>
-                    <!-- /.nav-second-level -->
+                </li>
+                <li>
+                    <a href="{% url 'request_meta' %}"><i class="fa fa-user-secret"></i> Request Info</a>
+                </li>
+                <li>
+                    <a><i class="fa fa-check-square-o"></i> Forms<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="{% url 'simple_form_handling' %}"><i class="fa fa-search"></i> 1. Simple search</a></li>
+                        <li><a href="{% url 'books:search_by_title' %}"><i class="fa fa-book"></i> 2. Search Books</a></li>
+                        <li><a href="{% url 'books:search_by_valid_title' %}"><i class="fa fa-code"></i> 3. Simple validation</a></li>
+                        <li><a href="{% url 'contact_form' %}"><i class="fa fa-envelope"></i> 4. Contact Form</a></li>
+                    </ul>
                 </li>
                 {% comment %}
                 <li>

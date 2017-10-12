@@ -17,5 +17,13 @@
 {% endblock %}
 
 {% block content %}
-    <p>Adrian Pothuaud is greating YOU :)</p>
+    <p class="text-uppercase">Django Core App by AP is greating YOU :)</p>
+    <p><small>You are seeing the page displayed at <u><i>{{ request.get_host }}{{ request.path }}</i></u></small></p>
+    <p><small>We also got your browser information :</small></p>
+    <p><small>{{ request.META.HTTP_USER_AGENT }}</small></p>
+    <p><small>and your IP is <i>{{ request.META.REMOTE_ADDR }}</i></small></p>
+    {% if user.is_superuser %}
+        <p class="text-success">It seems that your a SUPERUSER dude ! Try the admin interface by clicking the key in top-right menu <i class="fa fa-arrow-circle-o-up fa-rotate-45"></i> .</p>
+    {% endif %}
+    <p class="text-info"><i class="fa fa-arrow-circle-left"></i> Go through the sidebar menus to explore the tutorial applications.</p>
 {% endblock %}

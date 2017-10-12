@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    Contact
+{% endblock %}
+
+{% block title %}
+    Django Core
+{% endblock %}
+
+{% block navbar_title %}
+    Contact
+{% endblock %}
+
+{% block content_title %}
+    Contact Us
+{% endblock %}
+
+{% block content %}
+    <p class="text-info">This form is generated with a Django Form Class ! A higher-level library that handles form- and validation-related tasks.</p>
+    <p class="text-info">GET method</p>
+    <form action="" method="get">
+        {% for hidden_field in form.hidden_fields %}
+            {{ hidden_field }}
+        {% endfor %}
+        {% for error in form.errors %}
+            <p class="text-danger"><strong>{{ error }}</strong></p>
+        {% endfor %}
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                {{ form.subject.label_tag }}
+                {{ form.subject }}
+            </div>
+            <div class="col-xs-12 col-md-4">
+                {{ form.full_name.label_tag }}
+                {{ form.full_name }}
+            </div>
+            <div class="col-xs-12 col-md-4">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+            </div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <p class="text-left">{{ form.message.label_tag }}</p>
+                {{ form.message }}
+            </div>
+        </div>
+        <hr/>
+        <div class="row text-right">
+            <input class="col-xs-6 col-md-4 btn btn-success" type="submit" value="Submit">
+        </div>
+        <hr/>
+    </form>
+    <p>Once submitted the current view will receive request parameters...</p>
+    <p>Current url : {{ request.get_full_path }}</p>
+    <p class="text-info">POST method</p>
+    <form action="" method="post">{% csrf_token %}
+        {% for hidden_field in form.hidden_fields %}
+            {{ hidden_field }}
+        {% endfor %}
+        {% for error in form.errors %}
+            <p class="text-danger"><strong>{{ error }}</strong></p>
+        {% endfor %}
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                {{ form.subject.label_tag }}
+                {{ form.subject }}
+            </div>
+            <div class="col-xs-12 col-md-4">
+                {{ form.full_name.label_tag }}
+                {{ form.full_name }}
+            </div>
+            <div class="col-xs-12 col-md-4">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+            </div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <p>{{ form.message.label_tag }}</p>
+                {{ form.message }}
+            </div>
+        </div>
+        <hr/>
+        <div class="row text-right">
+            <p class="text-center"><input class="col-xs-6 col-md-4 btn btn-success" type="submit" value="Submit"></p>
+        </div>
+        <hr/>
+    </form>
+    <p>Once submitted the current view will receive post parameters...</p>
+    <p>Current POST params : {{ request.POST }}</p>
+    <a href="{% url 'contact_form' %}" class="btn btn-primary">Refresh this page</a>
+{% endblock %}

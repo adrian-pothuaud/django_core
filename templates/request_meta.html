@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    Request Info
+{% endblock %}
+
+{% block title %}
+    Django Core
+{% endblock %}
+
+{% block navbar_title %}
+    Request Information
+{% endblock %}
+
+{% block content_title %}
+    What stands in your request ? <small>just a few part</small>
+{% endblock %}
+
+{% block content %}
+    <h3>Request</h3>
+    <div class="panel panel-info" style="width: auto;
+                                    word-wrap: break-word;">
+        <div class="panel-body">
+            <p>request.path</p>
+            <p>{{ request.path }}</p>
+        </div>
+    </div>
+    <div class="panel panel-info" style="width: auto;
+                                    word-wrap: break-word;">
+        <div class="panel-body">
+            <p>request.host</p>
+            <p>{{ request.get_host }}</p>
+        </div>
+    </div>
+    <div class="panel panel-info" style="width: auto;
+                                    word-wrap: break-word;">
+        <div class="panel-body">
+            <p>request.full_path</p>
+            <p>{{ request.get_full_path }}</p>
+        </div>
+    </div>
+    <div class="panel panel-info" style="width: auto;
+                                    word-wrap: break-word;">
+        <div class="panel-body">
+            <p>request.is_secure</p>
+            <p>{{ request.is_secure }}</p>
+        </div>
+    </div>
+    <hr/>
+    <h3>Request.META</h3>
+    <div class="panel panel-info" style="width: auto;
+                                    word-wrap: break-word;">
+        <div class="panel-body">
+            <p>request.META.HTTP_REFERER</p>
+            <p>{{ request.META.HTTP_REFERER }}</p>
+        </div>
+    </div>
+    <div class="panel panel-info" style="width: auto;
+                                    word-wrap: break-word;">
+        <div class="panel-body">
+            <p>request.META.HTTP_USER_AGENT</p>
+            <p>{{ request.META.HTTP_USER_AGENT }}</p>
+        </div>
+    </div>
+    <div class="panel panel-info" style="width: auto;
+                                    word-wrap: break-word;">
+        <div class="panel-body">
+            <p>request.META.REMOTE_ADDR</p>
+            <p>{{ request.META.REMOTE_ADDR }}</p>
+        </div>
+    </div>
+{% endblock %}

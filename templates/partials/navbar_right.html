@@ -1,5 +1,5 @@
-{% comment %}
-    <ul class="nav navbar-top-links navbar-right">
+<ul class="nav navbar-top-links navbar-right">
+    {% comment %}
         <!-- Messages -->
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -210,6 +210,9 @@
             <!-- /.dropdown-user -->
         </li>
         <!-- /.dropdown -->
+        {% endcomment %}
+        {% if request.user.is_superuser %}
+            <li><a href="/admin/"><i class="fa fa-cog fa-spin fa-fw"></i> Admin</a></li>
+        {% endif %}
     </ul>
     <!-- /.navbar-top-links -->
-{% endcomment %}

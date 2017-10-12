@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    Books
+{% endblock %}
+
+{% block title %}
+    Django Core
+{% endblock %}
+
+{% block navbar_title %}
+    Search Books
+{% endblock %}
+
+{% block content_title %}
+    Search Books by title
+{% endblock %}
+
+{% block content %}
+    <p class="text-info">GET method</p>
+    <form action="" method="get">
+        <input type="text" name="q">
+        <input class="btn btn-success" type="submit" value="Submit">
+    </form>
+    <p>Once submitted the current view will receive request parameters</p>
+    <p>and the results list will be updated with books that title contains the given query</p>
+    <p>Current url : {{ request.get_full_path }}</p>
+    <p class="text-info">POST method</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="q">
+        <input class="btn btn-success" type="submit" value="Submit">
+    </form>
+    <p>Once submitted the current view will receive post parameters</p>
+    <p>and the results list will be updated with books that title contains the given query</p>
+    <p>Current POST params : {{ request.POST }}</p>
+    <a href="{% url 'books:search_by_title' %}" class="btn btn-primary">Refresh this page</a>
+
+    <h3>Results</h3>
+    {% if results %}
+        <p>Found {{ results|length }} book{{ results|pluralize }}.</p>
+        {% for result in results %}
+            <p class="text-primary">{{ result }}</p>
+        {% endfor %}
+    {% else %}
+        <p class="text-info">There is no results to be displayed.</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    Form
+{% endblock %}
+
+{% block title %}
+    Django Core
+{% endblock %}
+
+{% block navbar_title %}
+    Simple
+{% endblock %}
+
+{% block content_title %}
+    Simple Form handling example
+{% endblock %}
+
+{% block content %}
+    <p class="text-info">GET method</p>
+    <form action="" method="get">
+        <input type="text" name="q">
+        <input class="btn btn-success" type="submit" value="Submit">
+    </form>
+    <p>Once submitted the current view will receive request parameters...</p>
+    <p>Current url : {{ request.get_full_path }}</p>
+    <p class="text-info">POST method</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="q">
+        <input class="btn btn-success" type="submit" value="Submit">
+    </form>
+    <p>Once submitted the current view will receive post parameters...</p>
+    <p>Current POST params : {{ request.POST }}</p>
+    <a href="{% url 'simple_form_handling' %}" class="btn btn-primary">Refresh this page</a>
+{% endblock %}
